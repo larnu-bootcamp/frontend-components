@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Notification__page_body{
+  display: flex;
+  flex-direction: row;
+  width: 100vh;
+  height: 100%;
+}
+
+.Notification__text_bar{
+  display:flex;
+  flex-direction:row;
+  width: 300px;
+  
+}
+
+.Notification__box_text{
+  width: 15%;
+  border-bottom: 5px solid #61D66B;
+}
+
+.Notification__image_plus{
+  width: 12px;
+  height: 12px;
+}
+
+.button__new_notification{
+  width: 200px;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 15px;
+  background-color: #61D66B;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.Notification__add_button_bar{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  gap: 400px;
+}
