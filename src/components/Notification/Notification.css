@@ -5,10 +5,9 @@
 }
 
 .Notification__page_body{
-  display: flex;
-  flex-direction: row;
-  width: 100vh;
+  width:100%;
   height: 100%;
+  background-color: #F0F5FD;
 }
 
 .Notification__text_bar{
@@ -29,7 +28,7 @@
 }
 
 .button__new_notification{
-  width: 200px;
+  width: 300px;
   height: 35px;
   display: flex;
   flex-direction: row;
@@ -48,4 +47,16 @@
   justify-content:center;
   align-items: center;
   gap: 400px;
+}
+
+.Notification__action_bar{
+  width: 80%;
+  height: 40px;
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: space-between;
+  border: 1px solid black;
+  background-color: #FFFFFF;
+  
 }

@@ -3,24 +3,3 @@
   margin: 0;
 }
 
-@font-face {
-  font-family: "Fibra-Bold";
-  src: url("./assets/fonts/Fibra-One-Bold.otf");
-}
-@font-face {
-  font-family: "Fibra-Regular";
-  src: url("./assets/fonts/Fibra-One-regular.otf");
-}
-
-:root {
-  font-family: "Fibra-Bold";
-  font-size: 16px;
-  line-height: 24px;
-  --font-fibre-regular: "Fibra-Regular";
-  --font-fibre-bold: "Fibra-Bold";
-  --color-title:#3E416D;
-  --color-text:#9798A9;
-  --color-btn-green:#61D66B;
-  --color-bg-web: #F0F5FD;
-  --color-container-bg:#FFF;
-}
