@@ -8,6 +8,10 @@
   width:100%;
   height: 100%;
   background-color: #F0F5FD;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
 }
 
 .Notification__text_bar{
@@ -50,13 +54,26 @@
 }
 
 .Notification__action_bar{
-  width: 80%;
+  width: 90%;
   height: 40px;
   display: flex;
   flex-direction:row;
   align-items:center;
-  justify-content: space-between;
-  border: 1px solid black;
+  justify-content: space-evenly;
+  border-radius: 10px;
   background-color: #FFFFFF;
-  
+}
+
+.Notification__box_body{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: .9;
+  font-size: large;
+}
+
+.Notification__image_message{
+  width: 100px;
+  height:100px;
 }
