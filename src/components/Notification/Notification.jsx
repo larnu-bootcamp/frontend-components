@@ -36,12 +36,6 @@ const Notification = () => {
           <img className="Notification__image_message" src={message} />
           <p>Crea tu primera notificacion</p>
       </div>
-      <div className="Notification__box_information">
-        <h4>hola</h4><p>hola</p>
-        <p></p>
-        <p></p>
-        <p></p>
-      </div>
     </div>
   );
 };

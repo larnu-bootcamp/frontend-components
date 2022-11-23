@@ -3,13 +3,14 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import Notification from './components/Notification/Notification'
 import Navbar from './components/Navbar/Navbar'
+import Notification_1 from './Pages/Page_1'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <Navbar />
+      <Notification_1 />
     </div>
   )
 }

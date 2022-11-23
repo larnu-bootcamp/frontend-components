@@ -22,9 +22,7 @@ const Navbar = () => {
       </div>
       <div className="Navbar__Button_out">
       <ArrowBackIosNewIcon className="arrow" />
-        <button className="Navbar__button_logout">
-          LogOut
-        </button>
+        <p>Logout</p>
       </div>
     </div>
   );
