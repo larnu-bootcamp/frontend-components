@@ -23,13 +23,13 @@ export default function Dashboard() {
   const [state, setState] = useState(0);
 
   /* When the user is logged in navigate to the dashboard */
-  function handleUserLoggedIn(user) {
+  function handleUserLoggedIn(user: React.SetStateAction<{}>) {
     setCurrentUser(user);
     setState(2);
   }
 
   /* Logeado without register */
-  function handleUserNotRegistred(user) {
+  function handleUserNotRegistred(user: any) {
     navigate("/login");
   }
 

@@ -1,8 +1,8 @@
 /* Initialize Firebase */
 import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
-import { getStorage, ref, uploadBytes, getDownloadURL, getBytes } from 'firebase/storage';
-import { getFirestore, collection, addDoc, getDocs, doc, getDoc, query, where, setDoc, deleteDoc } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
+import { getFirestore, collection, getDocs, doc, getDoc, query, where, setDoc, DocumentData } from 'firebase/firestore';
 import { getAnalytics } from "firebase/analytics";
 
 
@@ -27,7 +27,7 @@ export const storage = getStorage(app);
 export const analytics = getAnalytics(app);
 
 /* This function check if the user exists in db by uid */
-export async function userExist(uid) {
+export async function userExist(uid: string) {
   /* Check if user exists in the database */
   const docRef = doc(db, "users", uid);
   /* Get the document */
@@ -38,9 +38,9 @@ export async function userExist(uid) {
 }
 
 /* Async function to check if user exists in the database */
-export async function existsUsername(username) {
+export async function existsUsername(username: unknown) {
   /*Create a empty array to store the usernames */
-  const users = [];
+  const users: DocumentData[] = [];
   /* Obtains all the data of the users collection frome the db */
   const docsRef = collection(db, 'users');
   /* Query the data from the db comparing where the username == username*/
@@ -56,7 +56,7 @@ export async function existsUsername(username) {
 }
 
 /* Function that allows to create a new user in the database */
-export async function registerNewUser(user) {
+export async function registerNewUser(user: { uid: any; displayName?: string | null; username?: string; processCompleted?: boolean; }) {
   try {
     /* set the collection and the user in the db */
     const collectionRef = collection(db, 'users');
@@ -67,7 +67,7 @@ export async function registerNewUser(user) {
   } catch (error) { }
 }
 /* Function that allows to delete a user in the database */
-export async function updateUser(user) {
+export async function updateUser(user: { uid?: any; }) {
   try {
     /* set the collection and the user in the db */
     const collectionRef = collection(db, 'users');
@@ -79,7 +79,7 @@ export async function updateUser(user) {
 }
 
 /* Function that gets the user data from the database */
-export async function getUserInfo(uid) {
+export async function getUserInfo(uid: string) {
   try {
     /* set the collection and the user in the db */
     const docRef = doc(db, 'users', uid);

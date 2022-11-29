@@ -1,8 +1,8 @@
-import {GoogleAuthProvider,signInWithPopup,createUserWithEmailAndPassword,getAuth,signInWithEmailAndPassword,} from "firebase/auth";
+import {GoogleAuthProvider,signInWithPopup,createUserWithEmailAndPassword,getAuth,signInWithEmailAndPassword, AuthProvider,} from "firebase/auth";
 import { app, auth } from "../firebase/firebase";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AuthProvider from '../components/authProvider';
+import AuthProvider1 from '../components/authProvider';
 import logo from "../assets/logo.svg";
 import Google from "../assets/Google.png";
 import ReactGa from 'react-ga';
@@ -25,7 +25,7 @@ export default function LoginView() {
     const googleProvider = new GoogleAuthProvider();
     await signInWithGoogle(googleProvider);
     /* Create a function to signWithGoogle and await for the auth from google */
-    async function signInWithGoogle(googleProvider) {
+    async function signInWithGoogle(googleProvider: AuthProvider) {
       try {
         const res = await signInWithPopup(auth, googleProvider);
         console.log(res);
@@ -49,9 +49,8 @@ export default function LoginView() {
         alert("Usuario creado satisfactoriamente");
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorMessage, errorCode);
+        alert(errorMessage);
       });
   };
   /* Allow the user to sign in with email and password */
@@ -64,18 +63,17 @@ export default function LoginView() {
         
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorMessage, errorCode);
+        alert(errorMessage);
       });
   };
   /* when hagglerUserLoggedIn is true, navigate to the dashboard */
-  function handleUserLoggedIn(user) {
+  function handleUserLoggedIn(user: any) {
     navigate("/dashboard");
   }
 
   /* when handleUserNotResgistered is true, navigate to the register page */
-  function handleUserNotRegistred(user) {
+  function handleUserNotRegistred(user: any) {
     navigate("/choose-username");
   }
 
@@ -120,12 +118,12 @@ export default function LoginView() {
   }
 
   return (
-    <AuthProvider
+    <AuthProvider1
       onUserLoggedIn={handleUserLoggedIn}
       onUserNotRegistred={handleUserNotRegistred}
       onUserNotLoggedIn={handleUserNotLoggedIn}
     >
       <div>Loading....</div>
-    </AuthProvider>
+    </AuthProvider1>
   );
 }

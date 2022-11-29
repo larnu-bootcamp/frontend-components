@@ -18,7 +18,7 @@ export default function ChooseUsernameView () {
   const [username, setUsername] = useState('');
 
   /* When the user is logged in navigate to the dashboard */
-  function handleUserLoggedIn(user) {
+  function handleUserLoggedIn(user: any) {
     navigate('/dashboard');
   }
 
@@ -28,7 +28,7 @@ export default function ChooseUsernameView () {
   }
 
   /* Logeado without register */
-  function handleUserNotRegistred(user) {
+  function handleUserNotRegistred(user: React.SetStateAction<{}>) {
     setCurrentUser(user);
     setState(3);
   }
@@ -39,7 +39,7 @@ export default function ChooseUsernameView () {
   }
 
   /* Allow the user to choose a username */
-  function handleInputUsername(e) {
+  function handleInputUsername(e: { target: { value: React.SetStateAction<string>; }; }) {
     setUsername(e.target.value);
   }
 

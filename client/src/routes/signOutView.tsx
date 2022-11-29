@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import AuthProvider from "../components/authProvider";
 import { logout } from "../firebase/firebase";
+import React from "react";
 
 /* Component to sing out the user */
 export default function SignOutView () {
@@ -9,7 +10,7 @@ export default function SignOutView () {
   
 
   /* Function to sign out the user and navigate to the login page */
-  async function handleUserLoggedIn (user){
+  async function handleUserLoggedIn (user: any){
     await logout();
     navigate ('/');
     localStorage.removeItem('token');
@@ -17,7 +18,7 @@ export default function SignOutView () {
   }
 
   /* If the user is not registered in, navigate to the login page */
-  function handleUserNotRegistred(user){
+  function handleUserNotRegistred(user: any){
     navigate('/login');
   }
 
