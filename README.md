@@ -24,7 +24,7 @@ eventos creados y eventos standart que ofrece Google Analytics.
 
 
 ## 💻  Listados comandos
-* npm run run iniciara el servidor para vista previa en localhost:5173
+* npm run dev iniciara el servidor para vista previa en localhost:5173
 * npm run test iniciara vite test
 
 ## 🗎 Descargar de proyecto y colabora
