@@ -1,5 +1,5 @@
 
-![Logo](https://larnu.app/logo.png)
+[![larnu75.png](https://i.postimg.cc/vmPMr7fT/larnu75.png)](https://postimg.cc/LqZrR1yF)
 
 
 # Proyecto Dashboard Firebase y Google Analytics
