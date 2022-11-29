@@ -1,5 +1,5 @@
 
-[![larnu75.png](https://i.postimg.cc/vmPMr7fT/larnu75.png)](https://postimg.cc/LqZrR1yF)
+[![larnu50.png](https://i.postimg.cc/qq4LpKDc/larnu50.png)](https://postimg.cc/PpVZ4CjN)
 
 
 # Proyecto Dashboard Firebase y Google Analytics
