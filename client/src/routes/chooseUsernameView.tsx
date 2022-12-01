@@ -41,7 +41,7 @@ export default function ChooseUsernameView() {
   }
 
   /* Logeado without register */
-  function handleUserNotRegistred(
+  function handleUserNotRegistred( 
     user: React.SetStateAction<{
       displayName: string;
       email: string;
