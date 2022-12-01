@@ -2,6 +2,7 @@ import {  getAuth, onAuthStateChanged } from "firebase/auth";
 import {  app, auth, getUserInfo, registerNewUser, userExist } from "../firebase/firebase";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 /* Component to handle the authentication of the user */
 export default function AuthProvider(props: any) {
