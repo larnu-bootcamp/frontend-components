@@ -11,7 +11,7 @@ import dalletest7 from './assets/Dalle/dalletest7.png';
 import ReactGa from 'react-ga';
 
 
-const TRACKING_ID=import.meta.env.REACT_APP_TRACKING_CODE;
+const TRACKING_ID=import.meta.env.VITE_REACT_APP_TRACKING_CODE;
 ReactGa.initialize(TRACKING_ID)
 
 
