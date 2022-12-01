@@ -14,7 +14,7 @@ export default function SignOutView () {
     await logout();
     navigate ('/');
     localStorage.removeItem('token');
-    window.location.reload(false);
+    window.location.reload();
   }
 
   /* If the user is not registered in, navigate to the login page */

@@ -4,7 +4,8 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 /* Component to handle the authentication of the user */
-export default function AuthProvider ({children, onUserLoggedIn, onUserNotLoggedIn, onUserNotRegistred}) {
+export default function AuthProvider(props: any) {
+  const { onUserLoggedIn, onUserNotLoggedIn, onUserNotRegistred, children } = props;
   const navigate = useNavigate();
   const auth1= getAuth(app);
 

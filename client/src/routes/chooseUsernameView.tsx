@@ -90,7 +90,7 @@ export default function ChooseUsernameView () {
     );
   }
   return (
-    <AuthProvider
+    <AuthProvider children={null}
       onUserLoggedIn={handleUserLoggedIn}
       onUserNotRegistred={handleUserNotRegistred}
       onUserNotLoggedIn={handleUserNotLoggedIn}
