@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import ReactGa from "react-ga";
-import Iframe from "react-iframe";
+/* import the image plus.png from the assets folder */
+import plus from "../assets/plus.png";
+
 
 /* Component to sing out the user */
 export default function DashboardWrapper(props: any) {
@@ -11,14 +13,16 @@ export default function DashboardWrapper(props: any) {
     label: "label",
   });
   return (
+    <div className="signOutContainer">
     <div className="signOut">
       <nav>
         <Link to="/signout">
+          <img className="plus"src={plus} alt="plus" />
           <h2> Sign Out </h2>
         </Link>
       </nav>
       <div>{children}</div>
-    
+    </div>
     </div>
   );
 }
