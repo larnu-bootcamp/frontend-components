@@ -14,8 +14,20 @@ export default function ChooseUsernameView () {
   
   const navigate = useNavigate();
   const [state, setState] = useState(0);
-  const [currentUser, setCurrentUser] = useState({});
-  const [username, setUsername] = useState('');
+  const [currentUser, setCurrentUser] = useState({
+    displayName: "",
+    email: "",
+    emailVerified: false,
+    isAnonymous: false,
+    phoneNumber: "",
+    photoURL: "",
+    providerData: [],
+    providerId: "",
+    uid: "",
+  });
+  const [username, setUsername] = useState(
+    currentUser.displayName || currentUser.email || ""
+  );
 
   /* When the user is logged in navigate to the dashboard */
   function handleUserLoggedIn(user: any) {
@@ -28,7 +40,17 @@ export default function ChooseUsernameView () {
   }
 
   /* Logeado without register */
-  function handleUserNotRegistred(user: React.SetStateAction<{}>) {
+  function handleUserNotRegistred(user: React.SetStateAction<{
+    displayName: string;
+    email: string;
+    emailVerified: boolean;
+    isAnonymous: boolean;
+    phoneNumber: string;
+    photoURL: string;
+    providerData: never[];
+    providerId: string;
+    uid: string;
+  }>) {
     setCurrentUser(user);
     setState(3);
   }
