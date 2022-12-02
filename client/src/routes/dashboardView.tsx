@@ -5,18 +5,15 @@ import AuthProvider from "../components/authProvider";
 import DashboardWrapper from "../components/dashboardWrapper";
 import dashLogo from "../assets/dashboard.png";
 import pushLogo from "../assets/paper-plane.png";
-import ReactGa from 'react-ga';
+import ReactGa from "react-ga";
 import Iframe from "react-iframe";
 import React from "react";
 
 /* Component to display the dashboard page */
 export default function Dashboard() {
-
-  useEffect (()=>{
-    ReactGa.pageview(window.location.pathname)
+  useEffect(() => {
+    ReactGa.pageview(window.location.pathname);
   }, []);
-
-
 
   const navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState({});
@@ -43,42 +40,49 @@ export default function Dashboard() {
       <AuthProvider
         onUserLoggedIn={handleUserLoggedIn}
         onUserNotLoggedIn={handleUserNotLoggedIn}
-        onUserNotRegistred={handleUserNotRegistred}>
+        onUserNotRegistred={handleUserNotRegistred}
+      >
         <div className="loading">Loading...</div>
       </AuthProvider>
     );
   }
 
-/* This function allow to change to Push View */
-/*Note: This function is not used in this version of the app*/  
-   const handleOnClick =() => {
-    ReactGa.event({'category': 'click push', 'action': 'click', 'label': 'label'});
+  /* This function allow to change to Push View */
+  /*Note: This function is not used in this version of the app*/
+  const handleOnClick = () => {
+    ReactGa.event({ category: "click push", action: "click", label: "label" });
     navigate("/push-view");
-  }
-/* This function allow to change to the dashboard */
-  const handleOnClick2 =() => {
-    ReactGa.event({'category': 'click home', 'action': 'click', 'label': 'label'});
+  };
+  /* This function allow to change to the dashboard */
+  const handleOnClick2 = () => {
+    ReactGa.event({ category: "click home", action: "click", label: "label" });
     navigate("/");
-  }
+  };
 
   return (
     <div className="dashboardContainer">
       <div className="dashboardSider">
-      <img className="logo" src={logo} alt="logo"></img>
-      <div className="dashboardSiderNav">
-        <div className="dashboardSiderButtons1">
-        <a className="dashboardSiderItem" onClick={handleOnClick2}><img className="dashLogo" src={dashLogo} alt="dashLogo"/>Home</a>
+        <img className="logo" src={logo} alt="logo"></img>
+        <div className="dashboardSiderNav">
+          <div className="dashboardSiderButtons1">
+            <a className="dashboardSiderItem" onClick={handleOnClick2}>
+              <img className="dashLogo" src={dashLogo} alt="dashLogo" />
+              Dashboard
+            </a>
+          </div>
+          <div className="dashboardSiderButtons2">
+            <a className="dashboardSiderItem" onClick={handleOnClick}>
+              <img className="pushLogo" src={pushLogo} alt="pushLogo" />
+              Notificaciones Push
+            </a>
+          </div>
         </div>
-        <div className="dashboardSiderButtons2">
-        <a className="dashboardSiderItem" onClick={handleOnClick}><img className="pushLogo" src={pushLogo} alt="pushLogo"/>Push</a>
-        </div>
-      </div>
         <DashboardWrapper children={null} />
       </div>
       <div className="dashboardView">
-        <Iframe className="iframe"
+        <Iframe
+          className="iframe"
           width="100%"
-  
           src="https://datastudio.google.com/embed/reporting/201e21d7-2005-44cb-8d09-e6b0827521db/page/1M"
           url="{}"
         ></Iframe>

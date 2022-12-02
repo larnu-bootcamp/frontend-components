@@ -1,19 +1,43 @@
+/* Importaciones */
+@font-face {
+  font-family: 'Fibra One';
+  src: url('src/assets/Fibra One Complete Family/Fibra_One_Regular.otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Fibra One';
+  src: url('src/assets/Fibra One Complete Family/Fibra_One_Bold.otf');
+  font-weight: bold;
+}
+
+/* Global */
 * {
   box-sizing: border-box;
-  font-family: roboto, sans-serif;
+  font-family: 'Fibra One', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("./assets/background_larnu.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  /* Color BackGround */
+  background-color: #343757;
+ 
 }
 
 /* Display Flex , Flex Direction : Column , Justify Content ; Center , aling Item Center*/
 
-.loginForm,.buttons,.googleSingUpAcount,.singInAcount,
-.singUpAcount,.email,.password,.App,button,input,.imagenes,.dashboardSider,.loading,.chooseUserName{
+.loginForm,
+.buttons,
+.googleSingUpAcount,
+.singInAcount,
+.singUpAcount,
+.email,
+.password,
+.App,
+button,
+input,
+.imagenes,
+.dashboardSider,
+.loading,
+.chooseUserName {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,10 +65,10 @@
 
 .singInAcount,
 .singUpAcount {
-  gap: 1rem;
-  padding: 1rem;
+  gap: 2rem;
+  padding: 2rem;
   border-radius: 0.5rem;
-  background-color: #5643c1;
+  background-color: ;
   height: 40px;
   font-size: medium;
   color: #fff;
@@ -76,10 +100,10 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
 .logo {
-  width: 250px;
-  display: flex;
-  align-items: center;
+  width: 175px;
+  margin-top: 150px;
 }
 
 .googleLogo {
@@ -170,13 +194,9 @@ input {
 
 .dashboardSider {
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   width: 45vh;
   height: 100vh;
-}
-
-.dashboardSider h1 {
-  background-color: none;
 }
 
 .dashboardView {
@@ -186,6 +206,7 @@ input {
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 200vh;
+  background-color: #FFF;
 }
 
 .vote {
@@ -206,13 +227,13 @@ input {
   height: 95vh;
 }
 
-.pushLogo{
+.pushLogo {
   width: 15px;
   height: 15px;
   margin-right: 10px;
 }
 
-.dashLogo{
+.dashLogo {
   width: 15px;
   height: 15px;
   margin-right: 10px;
@@ -220,20 +241,25 @@ input {
 
 .dashboardSiderButtons1 {
   margin-top: 50px;
+  background-color: #343757;
   margin-bottom: 20px;
 }
 
 .dashSiderButtons1:hover {
-color: #888;
+  color: #888;
 }
 
 
 .dashSiderButtons2:hover {
   color: #888;
-  }
-  
+}
+
 .signOut {
-  margin-top: 150px;
+  display: flex;
+  flex-direction: row;
+  background-color: #292b44;
+  margin: 20px;
+
 }
 
 .signOut:hover {
@@ -248,7 +274,7 @@ color: #888;
 .iframe {
   width: 98%;
   height: 95vh;
-} 
+}
 
 .chooseUserName {
   flex-direction: column;
@@ -265,6 +291,7 @@ color: #888;
   font-size: 1rem;
   color: #ff8;
 }
+
 .chooseUserName input {
   color: #fff;
   border-radius: 0.5rem;
@@ -278,4 +305,30 @@ color: #888;
   border-radius: 0.5rem;
   padding: 0.5rem;
   height: 40px;
+}
+
+.plus {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background-color:#343757;
+  color: #FFF;
+  rotate: 90deg;
+  border-radius: 50%;
+  padding: 5px;
+  fill: #FFF;
+}
+
+.signOutContainer {
+  width: 100%;
+  background-color: #292b44;
+  height: 70px;
+  margin-block-start: 279px;
+
+  
+
+}
+
+.signOutContainer h3 {
+  background-color: #292b44;
 }
