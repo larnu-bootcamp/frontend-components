@@ -93,12 +93,15 @@ export default function LoginView() {
             type="email"
             id="email"
             placeholder="Tu correo electrónico"
+            required
             onChange={(e) => setEmail(e.target.value)}
           ></input>
           <input
             className="password"
             type="password"
             id="password"
+            placeholder="Tu contraseña"
+            required
             onChange={(e) => setPassword(e.target.value)}
           ></input>
           <div className="buttons">
@@ -123,7 +126,7 @@ export default function LoginView() {
       onUserNotRegistred={handleUserNotRegistred}
       onUserNotLoggedIn={handleUserNotLoggedIn}
     >
-      <div>Loading....</div>
+      <div className="loading">Loading....</div>
     </AuthProvider1>
   );
 }

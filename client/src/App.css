@@ -138,7 +138,7 @@ button {
   border-radius: 0.5rem;
   background-color: #5643c1;
   height: 40px;
-  font-size: medium;
+  font-size: 13px;
   color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -159,6 +159,7 @@ input {
   gap: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 }
 
 
@@ -220,6 +221,7 @@ input {
 .loading {
   height: 100vh;
   gap: 1rem;
+  color: white;
 }
 
 .iframe {
@@ -332,3 +334,5 @@ input {
 .signOutContainer h3 {
   background-color: #292b44;
 }
+
+

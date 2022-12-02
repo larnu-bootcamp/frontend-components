@@ -91,11 +91,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>Prueba Botones</p>
-
-
-
       </header>
-
+      
       <div className='counter'>
         <button onClick={() => login()}>Ir al Login</button>
         <button onClick={() => dashboard()}>Ir al Dashboard</button>
