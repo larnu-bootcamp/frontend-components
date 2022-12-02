@@ -19,7 +19,7 @@ export default function AuthProvider(props: any) {
         if (isRegistred) {
 /* if the user is registred, get the user info and pass it to the onUserLoggedIn function */
           const userInfo = await getUserInfo(user.uid);
-          if (userInfo.processCompleted) {
+          if (userInfo?.processCompleted) {
             onUserLoggedIn(userInfo);
           } else {
 /* if the user is not registred, pass the user to the onUserNotRegistred function */            

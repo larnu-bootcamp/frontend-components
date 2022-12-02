@@ -284,7 +284,7 @@ input {
 
 .chooseUserName h1 {
   font-size: 2rem;
-  color: #fff;
+  color: white;
 }
 
 .chooseUserName p {
@@ -293,7 +293,7 @@ input {
 }
 
 .chooseUserName input {
-  color: #fff;
+  color: grey;
   border-radius: 0.5rem;
   padding: 0.5rem;
   width: 250px;
