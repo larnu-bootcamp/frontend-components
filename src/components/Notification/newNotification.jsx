@@ -4,6 +4,19 @@ import ios from "../../assets/ios.png";
 import "./css/newNotification.css";
 
 const NewNotification = () => {
+  
+  function handleSubmitProgrammed  () {
+    return(
+      <form>
+    <input type={"date"}/>
+    <p>a las</p>
+    <input type={"datetime"}/>
+    </form>
+    )
+  }
+  
+  
+  
   return (
     <div className="newNotificationBody">
       <h1>Detalle nueva notificacion push</h1>
@@ -65,7 +78,7 @@ const NewNotification = () => {
           <label name="programacion">
               programacion:
               <button>Ahora</button>
-              <button>Programado</button>
+              <button onClick={handleSubmitProgrammed}>Programado</button>
               <button>Perzonalizar (Notif.Recurente)</button>
           </label>
         </form>
