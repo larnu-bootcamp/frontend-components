@@ -1,0 +1,42 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.newNotify{
+  width: 50%;
+}
+
+.formNotify{
+  display: flex;
+  flex-direction: column;
+}
+
+.actions{
+  display: flex;
+  flex-direction: column;
+}
+
+.orientacion{
+  width: 50px;
+  height: 30px;
+}
+
+.orientacionimg{
+  width: 20px;
+  height: 20px;
+}
+
+.textTile{
+  width: 400px;
+  height: 30px;
+}
+
+.textBody{
+  width: 400px;
+  height: 200px;
+}
+
+
+
