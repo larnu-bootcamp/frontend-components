@@ -1,15 +1,9 @@
 import React from "react";
-import "./Notification.css";
+import "./css/Notification.css";
 import plus from "../../assets/plus.png";
 import message from "../../assets/message.png";
 
-
-
-
-
 const Notification = () => {
-
-
   return (
     <div className="Notification__page_body">
       <div>
@@ -23,7 +17,7 @@ const Notification = () => {
           </button>
         </div>
       </div>
-      <div className="Notification__action_bar">
+    <div className="Notification__action_bar">
         <p>Campaña</p>
         <p>Inicio</p>
         <p>Estado</p>
@@ -31,10 +25,10 @@ const Notification = () => {
         <p>Envios</p>
         <p>Abiertos</p>
         <p>% de apertura</p>
-      </div>
+      </div> 
       <div className="Notification__box_body">
-          <img className="Notification__image_message" src={message} />
-          <p>Crea tu primera notificacion</p>
+        <img className="Notification__image_message" src={message} />
+        <p>Crea tu primera notificacion</p>
       </div>
     </div>
   );
