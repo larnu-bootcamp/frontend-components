@@ -4,6 +4,7 @@ import AuthProvider from "../components/authProvider";
 import { existsUsername, updateUser } from "../firebase/firebase";
 import ReactGa from "react-ga";
 import React from "react";
+import { reauthenticateWithCredential } from "firebase/auth";
 
 /* Component to choose a username */
 export default function ChooseUsernameView() {
@@ -52,6 +53,8 @@ export default function ChooseUsernameView() {
       providerData: never[];
       providerId: string;
       uid: string;
+      username: string;
+      processCompleted: boolean
     }>
   ) {
     setCurrentUser(user);
