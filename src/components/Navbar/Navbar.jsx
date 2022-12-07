@@ -3,7 +3,8 @@ import logo from "../../assets/logo.png";
 import send from "../../assets/iconSend.png";
 import "./Navbar.css";
 import dash from "../../assets/dashboard.png";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+
+
 
 const Navbar = () => {
   return (
@@ -21,7 +22,7 @@ const Navbar = () => {
         </button>
       </div>
       <div className="Navbar__Button_out">
-      <ArrowBackIosNewIcon className="arrow" />
+      
         <p>Logout</p>
       </div>
     </div>

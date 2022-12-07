@@ -20,6 +20,10 @@
   flex-direction: column;
 }
 
+.imginfo{
+  width: 20px;
+  height: 20px;
+}
 
 .orientation{
   width: 50px;
@@ -41,5 +45,16 @@
   height: 100px;
 }
 
+.programmingNotify{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.now, .programmed, .personalize{
+  background-color: #E3EEFF;
+  color: #3A59E8;
+  border-color: transparent;
+}
 
 

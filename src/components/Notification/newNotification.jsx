@@ -1,29 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import android from "../../assets/android.png";
 import ios from "../../assets/ios.png";
 import "./css/newNotification.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import info from "../../assets/info.png"
+
+
+function NowDateComponent ()  {
+  const [startDate, setStartDate] = useState(new Date());
+  
+  return(
+    <React.Fragment>
+    <DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            showTimeSelect
+            dateFormat="Pp"
+            inline
+          />
+          </React.Fragment>
+  )
+}
+
+
 
 const NewNotification = () => {
   
-  function handleSubmitProgrammed  () {
-    return(
-      <form>
-    <input type={"date"}/>
-    <p>a las</p>
-    <input type={"datetime"}/>
-    </form>
-    )
+  const [isNowDate, setIsNowDate] = useState(false);
+  
+  const handleNowButton = () => {
+    setIsNowDate(true)
   }
-  
-  
-  
+
   return (
     <div className="newNotificationBody">
-      <h1>Detalle nueva notificacion push</h1>
+      
       <div className="newNotify">
-        <form className="formNotify">
+      <h1>Detalle nueva notificacion push</h1>
+        <form
+          className="formNotify"
+          onSubmit={(ev) => {
+            ev.preventDefault();
+          }}
+        >
           <label name="title" className="title actions">
-            Detalle de la nueva notificacion{" "}
+            Detalle de la nueva notificacion 
+            <img 
+            className="imginfo"
+            src={info}/>{" "}
             <input
               className="textTile"
               id="title"
@@ -75,14 +100,27 @@ const NewNotification = () => {
               </button>
             </div>
           </label>
-          <label name="programacion">
-              programacion:
-              <button>Ahora</button>
-              <button onClick={handleSubmitProgrammed}>Programado</button>
-              <button>Perzonalizar (Notif.Recurente)</button>
+          <label className="programacion" name="programacion">
+            programacion:{" "}
           </label>
+          <div className="programmingNotify">
+            <button className="now" onClick={handleNowButton}>Ahora</button>
+            <button className="programmed" >
+              Programado
+            </button>
+            <button className="personalize">
+              Perzonalizar (Notif.Recurente)
+            </button>
+          </div>
+          <div className="formCalendar">
+          {isNowDate && <NowDateComponent/>}
+          </div>
+
         </form>
       </div>
+        <div>
+
+        </div>
     </div>
   );
 };
