@@ -21,6 +21,26 @@ function NowDateComponent ()  {
           />
           </React.Fragment>
   )
+};
+
+function ProgrammedDateComponent() {
+  const [startDate, setStartDate] = useState(new Date());
+
+
+  return(
+  <React.Fragment>
+<input className="dateProgrammed" type={"date"}/>
+<p>a las</p>
+<input className="timeProgrammed" type={"time"}/>
+<DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            
+            dateFormat="Pp"
+            inline
+          />
+  </React.Fragment>
+  )
 }
 
 
@@ -32,6 +52,15 @@ const NewNotification = () => {
   const handleNowButton = () => {
     setIsNowDate(true)
   }
+
+  const [ isProgrammedDate, setIsProgrammedDate] = useState(false);
+
+  const handleProgrammedButton = () => {
+    setIsProgrammedDate(true)
+  }
+
+
+
 
   return (
     <div className="newNotificationBody">
@@ -105,7 +134,7 @@ const NewNotification = () => {
           </label>
           <div className="programmingNotify">
             <button className="now" onClick={handleNowButton}>Ahora</button>
-            <button className="programmed" >
+            <button className="programmed" onClick={handleProgrammedButton}>
               Programado
             </button>
             <button className="personalize">
@@ -113,7 +142,8 @@ const NewNotification = () => {
             </button>
           </div>
           <div className="formCalendar">
-          {isNowDate && <NowDateComponent/>}
+          {isNowDate && <NowDateComponent/> }
+          {isProgrammedDate && <ProgrammedDateComponent/>}
           </div>
 
         </form>
