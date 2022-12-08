@@ -19,7 +19,6 @@
   padding: 0;
   /* Color BackGround */
   background-color: #343757;
- 
 }
 
 /* Display Flex , Flex Direction : Column , Justify Content ; Center , aling Item Center*/
@@ -194,10 +193,12 @@ input {
 }
 
 .dashboardSider {
+  display: flex;
   flex-direction: column;
-  gap: 2rem;
+  justify-content: space-between;
   width: 45vh;
   height: 100vh;
+  
 }
 
 .dashboardView {
@@ -242,7 +243,6 @@ input {
 }
 
 .dashboardSiderButtons1 {
-  margin-top: 50px;
   background-color: #343757;
   margin-bottom: 20px;
 }
@@ -275,7 +275,7 @@ input {
 
 .iframe {
   width: 98%;
-  height: 95vh;
+  height: 100vh;
 }
 
 .chooseUserName {
@@ -324,15 +324,27 @@ input {
 .signOutContainer {
   width: 100%;
   background-color: #292b44;
-  height: 70px;
-  margin-block-start: 150px;
-
-  
-
+  height: 80px;
 }
+
 
 .signOutContainer h3 {
   background-color: #292b44;
 }
 
 
+.dashboardSiderNav {
+  margin-top: -200px;
+}
+
+.pushContainer {
+color: white;
+
+
+}
+
+.PushView {
+width: 100%;
+height: 100vh;
+background-color: #FFF;
+}
