@@ -46,7 +46,7 @@ export default function LoginView() {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
-        alert("Usuario creado satisfactoriamente");
+        /*alert("Usuario creado satisfactoriamente");*/
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -59,7 +59,7 @@ export default function LoginView() {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user)
-        alert("Login sastifactorio");
+        /*alert("Login sastifactorio");*/
         
       })
       .catch((error) => {
@@ -106,7 +106,7 @@ export default function LoginView() {
           ></input>
           <div className="buttons">
             <button className="singUpAcount" onClick={signUp}>
-              Crer Cuenta
+              Crear Cuenta
             </button>
             <button className="singInAcount" onClick={signIn}>
               Acceder
