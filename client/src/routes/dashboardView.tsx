@@ -56,8 +56,9 @@ export default function Dashboard() {
   /* This function allow to change to the dashboard */
   const handleOnClick2 = () => {
     ReactGa.event({ category: "click home", action: "click", label: "label" });
-    navigate("/");
+    navigate("/dashboard");
   };
+
 
   return (
     <div className="dashboardContainer">
@@ -71,7 +72,7 @@ export default function Dashboard() {
             </a>
           </div>
           <div className="dashboardSiderButtons2">
-            <a className="dashboardSiderItem" onClick={handleOnClick}>
+            <a  onClick={handleOnClick}>
               <img className="pushLogo" src={pushLogo} alt="pushLogo" />
               Notificaciones Push
             </a>
