@@ -40,48 +40,64 @@ function ProgrammedDateComponent() {
   );
 }
 
-function PersonalizeDateComponent () {
-  
-  
-  return(
+function PersonalizeDateComponent() {
+  return (
     <React.Fragment>
-    <table>
-      <div class="roundchk">
-			<input name="Domingo" type="checkbox" id="checkbox-dom" value="Dom"/>
-			<label for="checkbox-Dom"> D </label>
-		  </div>
-      <div class="roundchk">
-			<input name="Lunes" type="checkbox" id="checkbox-lun" value="Lun"/>
-			<label for="checkbox-lun"> L </label>
-		  </div>
-      <div class="roundchk">
-			<input name="Martes" type="checkbox" id="checkbox-mar" value="Mar"/>
-			<label for="checkbox-mar"> M </label>
-		  </div>
-      <div class="roundchk">
-			<input name="Miercoles" type="checkbox" id="checkbox-mie" value="Mie"/>
-			<label for="checkbox-mie"> M </label>
-		  </div>
-      <div class="roundchk">
-			<input name="Jueves" type="checkbox" id="checkbox-jue" value="Jue"/>
-			<label for="checkbox-jue"> J </label>
-		  </div>
-      <div class="roundchk">
-			<input name="Viernes" type="checkbox" id="checkbox-vie" value="Vie"/>
-			<label for="checkbox-vie"> V </label>
-		  </div>
-      <div class="roundchk">
-			<input name="Sabado" type="checkbox" id="checkbox-sab" value="Sab"/>
-			<label for="checkbox-sab"> S </label>
-		  </div>
-    </table>
-    <input className="timePersonalize" type={"time"} />
-    <div>
-      <p>Inicio</p>
-      <p>Fin</p>
-    </div>
+      <table>
+        <div class="roundchk">
+          <input name="Domingo" type="checkbox" id="checkbox-dom" value="Dom" />
+          <label for="checkbox-Dom"> D </label>
+        </div>
+        <div class="roundchk">
+          <input name="Lunes" type="checkbox" id="checkbox-lun" value="Lun" />
+          <label for="checkbox-lun"> L </label>
+        </div>
+        <div class="roundchk">
+          <input name="Martes" type="checkbox" id="checkbox-mar" value="Mar" />
+          <label for="checkbox-mar"> M </label>
+        </div>
+        <div class="roundchk">
+          <input
+            name="Miercoles"
+            type="checkbox"
+            id="checkbox-mie"
+            value="Mie"
+          />
+          <label for="checkbox-mie"> M </label>
+        </div>
+        <div class="roundchk">
+          <input name="Jueves" type="checkbox" id="checkbox-jue" value="Jue" />
+          <label for="checkbox-jue"> J </label>
+        </div>
+        <div class="roundchk">
+          <input name="Viernes" type="checkbox" id="checkbox-vie" value="Vie" />
+          <label for="checkbox-vie"> V </label>
+        </div>
+        <div class="roundchk">
+          <input name="Sabado" type="checkbox" id="checkbox-sab" value="Sab" />
+          <label for="checkbox-sab"> S </label>
+        </div>
+      </table>
+      <input className="timePersonalize" type={"time"} />
+      <div>
+        <p>Inicio</p>
+        <p>Fin</p>
+      </div>
     </React.Fragment>
-  )
+  );
+}
+
+function NotifyShowInitial() {
+  return (
+    <div className="showInitial">
+      <div className="notifyAndroid">
+
+      </div>
+      <div className="notifyIos">
+        
+      </div>
+    </div>
+  );
 }
 
 const NewNotification = () => {
@@ -92,7 +108,7 @@ const NewNotification = () => {
   const handleNowButton = () => {
     setIsNowDate(true);
     setIsProgrammedDate(false);
-    setIsPersonalizeDate(false)
+    setIsPersonalizeDate(false);
   };
 
   const handleProgrammedButton = () => {
@@ -105,7 +121,7 @@ const NewNotification = () => {
     setIsPersonalizeDate(true);
     setIsProgrammedDate(false);
     setIsNowDate(false);
-  }
+  };
 
   return (
     <div className="newNotificationBody">
@@ -120,57 +136,58 @@ const NewNotification = () => {
           <label name="title" className="title actions">
             Detalle de la nueva notificacion
             <img className="imginfo" src={info} />{" "}
-            <input
-              className="textTile"
-              id="title"
-              type="text"
-              placeholder="ingresa un titulo"
-            />
           </label>
-
+          <input
+            className="textTile"
+            id="title"
+            type="text"
+            placeholder="ingresa un titulo"
+          />
           <label name="text" className="text actions">
-            Texto de la notificacion{" "}
-            <input
-              className="textBody"
-              id="text"
-              type="textarea"
-              placeholder="ingresa un texto de la notificacion"
-            />
+            Texto de la notificacion <img className="imginfo" src={info} />
           </label>
-
+          <input
+            className="textBody"
+            id="text"
+            type="textarea"
+            placeholder="ingresa un texto de la notificacion"
+          />
           <label name="filePiker" className="filePiker actions">
             Imagen de notificacion (Opcional)
-            <label
-              name="filePiker"
-              htmlFor="filePiker"
-              className="butonPiker"
-              style={{
-                background: "#D1FFD5",
-                padding: "4px 20px",
-                width: "100px",
-                height: "25px",
-                color: "#1D745A",
-              }}
-            >
-              cambiar{" "}
-              <input
-                id={"filePiker"}
-                style={{ visibility: "hidden" }}
-                type={"file"}
-              />
-            </label>
           </label>
-          <label name="orientacionTitle ">
+          <label
+            name="filePiker"
+            htmlFor="filePiker"
+            className="butonPiker"
+            style={{
+              background: "#D1FFD5",
+              padding: "4px 20px",
+              width: "100px",
+              height: "25px",
+              color: "#1D745A",
+            }}
+          >
+            cambiar{" "}
+            <input
+              id={"filePiker"}
+              style={{ visibility: "hidden" }}
+              type={"file"}
+            />
+          </label>
+
+          <label name="orientacionTitle " className="actions">
             Orientacion
-            <div className="buttonOrientation">
-              <button className="orientation">
-                <img className="orientationimg" src={android} />
-              </button>
-              <button className="orientation">
-                <img className="orientationimg" src={ios} />
-              </button>
-            </div>
+            <img className="imginfo" src={info} />
           </label>
+          <div className="buttonOrientation">
+            <button className="orientation">
+              <img className="orientationimg" src={android} />
+            </button>
+            <button className="orientation">
+              <img className="orientationimg" src={ios} />
+            </button>
+          </div>
+
           <label className="programacion" name="programacion">
             programacion:{" "}
           </label>
@@ -188,11 +205,19 @@ const NewNotification = () => {
           <div className="formCalendar">
             {isNowDate && <NowDateComponent />}
             {isProgrammedDate && <ProgrammedDateComponent />}
-            {isPersonalizeDate && <PersonalizeDateComponent/>}
+            {isPersonalizeDate && <PersonalizeDateComponent />}
           </div>
         </form>
       </div>
-      <div></div>
+      <div className="notifyShow">
+        <h1>Vista Previa</h1>
+        <button className="buttonInitial">Estado Inicial</button>
+        <button className="buttonExpanded">Vista Expandida</button>
+        <div className="showInitial">
+        <div className="notifyAndroid"></div>
+        <div className="notifyIos"></div>
+        </div>
+      </div>
     </div>
   );
 };

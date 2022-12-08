@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+.newNotificationBody{
+  display: flex;
+  flex-direction: row;
+}
+
+
 .newNotify{
   width: 50%;
 }
@@ -15,9 +21,17 @@
   gap: 10px;
 }
 
+.title{
+  display: flex;
+}
+
 .actions{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  gap: 5px;
+  
 }
 
 .imginfo{
@@ -99,6 +113,27 @@
 
 .roundchk input[type="checkbox"]:checked + label:after {
   opacity: 1;
+}
+
+.showInitial{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.notifyAndroid{
+  width: 450px;
+  height: 200px;
+  background-image: url("../../../assets/android-EstadoInicial.png");
+  background-size: 450px 200px;
+}
+
+.notifyIos{
+  width: 450px;
+  height: 200px;
+  background-image: url("../../../assets/ios-EstadoInicial.png");
+  background-size: 450px 200px;
+  
 }
 
 
