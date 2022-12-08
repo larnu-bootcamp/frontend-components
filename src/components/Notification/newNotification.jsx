@@ -87,15 +87,20 @@ function PersonalizeDateComponent() {
   );
 }
 
-function NotifyShowInitial() {
+function NotifyShowInitialComponent() {
   return (
     <div className="showInitial">
-      <div className="notifyAndroid">
+      <div className="notifyAndroidIn"></div>
+      <div className="notifyIos"></div>
+    </div>
+  );
+}
 
-      </div>
-      <div className="notifyIos">
-        
-      </div>
+function NotifyShowExpandedComponent() {
+  return (
+    <div className="showExpanded">
+      <div className="notifyAndroidEx"></div>
+      <div className="notifyIosEx"></div>
     </div>
   );
 }
@@ -104,6 +109,11 @@ const NewNotification = () => {
   const [isNowDate, setIsNowDate] = useState(false);
   const [isProgrammedDate, setIsProgrammedDate] = useState(false);
   const [isPersonalizeDate, setIsPersonalizeDate] = useState(false);
+  const [isShowInitial, setIsShowInitial] = useState(false);
+  const [isShowExpanded, setIsShowExpanded] = useState(false)
+
+
+e
 
   const handleNowButton = () => {
     setIsNowDate(true);
@@ -213,9 +223,9 @@ const NewNotification = () => {
         <h1>Vista Previa</h1>
         <button className="buttonInitial">Estado Inicial</button>
         <button className="buttonExpanded">Vista Expandida</button>
-        <div className="showInitial">
-        <div className="notifyAndroid"></div>
-        <div className="notifyIos"></div>
+        <div className="showExpanded">
+          <div className="notifyAndroidEx"></div>
+          <div className="notifyIosEx"></div>
         </div>
       </div>
     </div>

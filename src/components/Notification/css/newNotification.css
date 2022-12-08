@@ -1,73 +1,73 @@
-*{
-  margin:0;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.newNotificationBody{
+.newNotificationBody {
   display: flex;
   flex-direction: row;
 }
 
-
-.newNotify{
+.newNotify {
   width: 50%;
 }
 
-.formNotify{
+.formNotify {
   display: flex;
   flex-direction: column;
   font-size: large;
   gap: 10px;
 }
 
-.title{
+.title {
   display: flex;
 }
 
-.actions{
+.actions {
   display: flex;
   flex-direction: row;
   text-align: center;
   align-items: center;
   gap: 5px;
-  
 }
 
-.imginfo{
+.imginfo {
   width: 20px;
   height: 20px;
 }
 
-.orientation{
+.orientation {
   width: 50px;
   height: 30px;
 }
 
-.orientationimg{
+.orientationimg {
   width: 20px;
   height: 20px;
 }
 
-.textTile{
+.textTile {
   width: 400px;
   height: 30px;
 }
 
-.textBody{
+.textBody {
   width: 400px;
   height: 100px;
 }
 
-.programmingNotify{
+.programmingNotify {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
 
-.now, .programmed, .personalize{
-  background-color: #E3EEFF;
-  color: #3A59E8;
+.now,
+.programmed,
+.personalize {
+  background-color: #e3eeff;
+  color: #3a59e8;
   border-color: transparent;
 }
 
@@ -85,7 +85,7 @@
   top: 0;
   width: 28px;
   font-size: 16px;
-	padding: 3px 0px 2px 5px;
+  padding: 3px 0px 2px 5px;
 }
 
 .roundchk label:after {
@@ -115,25 +115,42 @@
   opacity: 1;
 }
 
-.showInitial{
+.showInitial {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.notifyAndroid{
+.showExpanded {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.notifyAndroidIn {
   width: 450px;
   height: 200px;
   background-image: url("../../../assets/android-EstadoInicial.png");
   background-size: 450px 200px;
 }
 
-.notifyIos{
+.notifyIosIn {
   width: 450px;
   height: 200px;
   background-image: url("../../../assets/ios-EstadoInicial.png");
   background-size: 450px 200px;
-  
 }
 
+.notifyAndroidEx {
+  width: 450px;
+  height: 250px;
+  background-image: url("../../../assets/android-VistaExpandida.png");
+  background-size: 450px 250px;
+}
 
+.notifyIosEx {
+  width: 450px;
+  height: 250px;
+  background-image: url("../../../assets/ios-VistaExpandida.png");
+  background-size: 450px 250px;
+}
