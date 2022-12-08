@@ -66,7 +66,7 @@ export default function Dashboard() {
         <img className="logo" src={logo} alt="logo"></img>
         <div className="dashboardSiderNav">
           <div className="dashboardSiderButtons1">
-            <a className="dashboardSiderItem" onClick={handleOnClick2}>
+            <a  onClick={handleOnClick2}>
               <img className="dashLogo" src={dashLogo} alt="dashLogo" />
               Dashboard
             </a>

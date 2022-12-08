@@ -72,7 +72,7 @@ export default function Dashboard() {
             </a>
           </div>
           <div className="dashboardSiderButtons2">
-            <a className="dashboardSiderItem" onClick={handleOnClick}>
+            <a  onClick={handleOnClick}>
               <img className="pushLogo" src={pushLogo} alt="pushLogo" />
               Notificaciones Push
             </a>

@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import App from './components/home'
 import LoginView from './routes/loginView';
 import DashboardView from './routes/dashboardView';
 import SignOutView from './routes/signOutView';
