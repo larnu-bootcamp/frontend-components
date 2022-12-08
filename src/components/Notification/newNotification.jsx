@@ -4,69 +4,113 @@ import ios from "../../assets/ios.png";
 import "./css/newNotification.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import info from "../../assets/info.png"
+import info from "../../assets/info.png";
 
-
-function NowDateComponent ()  {
+function NowDateComponent() {
   const [startDate, setStartDate] = useState(new Date());
-  
-  return(
+
+  return (
     <React.Fragment>
-    <DatePicker
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-            showTimeSelect
-            dateFormat="Pp"
-            inline
-          />
-          </React.Fragment>
-  )
-};
+      <input className="timeNow" type={"time"} />
+      <DatePicker
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+        dateFormat="Pp"
+        inline
+      />
+    </React.Fragment>
+  );
+}
 
 function ProgrammedDateComponent() {
   const [startDate, setStartDate] = useState(new Date());
 
+  return (
+    <React.Fragment>
+      <input className="dateProgrammed" type={"date"} />
+      <p>a las</p>
+      <input className="timeProgrammed" type={"time"} />
+      <DatePicker
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+        dateFormat="Pp"
+        inline
+      />
+    </React.Fragment>
+  );
+}
 
+function PersonalizeDateComponent () {
+  
+  
   return(
-  <React.Fragment>
-<input className="dateProgrammed" type={"date"}/>
-<p>a las</p>
-<input className="timeProgrammed" type={"time"}/>
-<DatePicker
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-            
-            dateFormat="Pp"
-            inline
-          />
-  </React.Fragment>
+    <React.Fragment>
+    <table>
+      <div class="roundchk">
+			<input name="Domingo" type="checkbox" id="checkbox-dom" value="Dom"/>
+			<label for="checkbox-Dom"> D </label>
+		  </div>
+      <div class="roundchk">
+			<input name="Lunes" type="checkbox" id="checkbox-lun" value="Lun"/>
+			<label for="checkbox-lun"> L </label>
+		  </div>
+      <div class="roundchk">
+			<input name="Martes" type="checkbox" id="checkbox-mar" value="Mar"/>
+			<label for="checkbox-mar"> M </label>
+		  </div>
+      <div class="roundchk">
+			<input name="Miercoles" type="checkbox" id="checkbox-mie" value="Mie"/>
+			<label for="checkbox-mie"> M </label>
+		  </div>
+      <div class="roundchk">
+			<input name="Jueves" type="checkbox" id="checkbox-jue" value="Jue"/>
+			<label for="checkbox-jue"> J </label>
+		  </div>
+      <div class="roundchk">
+			<input name="Viernes" type="checkbox" id="checkbox-vie" value="Vie"/>
+			<label for="checkbox-vie"> V </label>
+		  </div>
+      <div class="roundchk">
+			<input name="Sabado" type="checkbox" id="checkbox-sab" value="Sab"/>
+			<label for="checkbox-sab"> S </label>
+		  </div>
+    </table>
+    <input className="timePersonalize" type={"time"} />
+    <div>
+      <p>Inicio</p>
+      <p>Fin</p>
+    </div>
+    </React.Fragment>
   )
 }
 
-
-
 const NewNotification = () => {
-  
   const [isNowDate, setIsNowDate] = useState(false);
-  
-  const handleNowButton = () => {
-    setIsNowDate(true)
-  }
+  const [isProgrammedDate, setIsProgrammedDate] = useState(false);
+  const [isPersonalizeDate, setIsPersonalizeDate] = useState(false);
 
-  const [ isProgrammedDate, setIsProgrammedDate] = useState(false);
+  const handleNowButton = () => {
+    setIsNowDate(true);
+    setIsProgrammedDate(false);
+    setIsPersonalizeDate(false)
+  };
 
   const handleProgrammedButton = () => {
-    setIsProgrammedDate(true)
+    setIsProgrammedDate(true);
+    setIsNowDate(false);
+    setIsPersonalizeDate(false);
+  };
+
+  const handlePersonalizeButton = () => {
+    setIsPersonalizeDate(true);
+    setIsProgrammedDate(false);
+    setIsNowDate(false);
   }
-
-
-
 
   return (
     <div className="newNotificationBody">
-      
       <div className="newNotify">
-      <h1>Detalle nueva notificacion push</h1>
+        <h1>Detalle nueva notificacion push</h1>
         <form
           className="formNotify"
           onSubmit={(ev) => {
@@ -74,10 +118,8 @@ const NewNotification = () => {
           }}
         >
           <label name="title" className="title actions">
-            Detalle de la nueva notificacion 
-            <img 
-            className="imginfo"
-            src={info}/>{" "}
+            Detalle de la nueva notificacion
+            <img className="imginfo" src={info} />{" "}
             <input
               className="textTile"
               id="title"
@@ -133,24 +175,24 @@ const NewNotification = () => {
             programacion:{" "}
           </label>
           <div className="programmingNotify">
-            <button className="now" onClick={handleNowButton}>Ahora</button>
+            <button className="now" onClick={handleNowButton}>
+              Ahora
+            </button>
             <button className="programmed" onClick={handleProgrammedButton}>
               Programado
             </button>
-            <button className="personalize">
-              Perzonalizar (Notif.Recurente)
+            <button className="personalize" onClick={handlePersonalizeButton}>
+              Personalizar (Notif.Recurente)
             </button>
           </div>
           <div className="formCalendar">
-          {isNowDate && <NowDateComponent/> }
-          {isProgrammedDate && <ProgrammedDateComponent/>}
+            {isNowDate && <NowDateComponent />}
+            {isProgrammedDate && <ProgrammedDateComponent />}
+            {isPersonalizeDate && <PersonalizeDateComponent/>}
           </div>
-
         </form>
       </div>
-        <div>
-
-        </div>
+      <div></div>
     </div>
   );
 };
