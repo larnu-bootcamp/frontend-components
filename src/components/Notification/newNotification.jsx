@@ -5,6 +5,7 @@ import "./css/newNotification.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import info from "../../assets/info.png";
+import imagen from "../../assets/imagen.png";
 
 function NowDateComponent() {
   const [startDate, setStartDate] = useState(new Date());
@@ -90,18 +91,50 @@ function PersonalizeDateComponent() {
 function NotifyShowInitialComponent() {
   return (
     <div className="showInitial">
-      <div className="notifyAndroidIn"></div>
-      <div className="notifyIos"></div>
-    </div>
+          <div className="notifyAndroidIn">
+            <div className="boxAndroidIn">
+              <h4>Hola mundo</h4>
+              <p>esto es un texto</p>
+              <div className="imageRefIn">
+                <img className="imgReferenceIn" src={imagen} />
+              </div>
+            </div>
+          </div>
+          <div className="notifyIosIn">
+            <div className="boxIosIn">
+              <h4>Hola mundo</h4>
+              <p>esto es un texto</p>
+              <div className="imageRefIn">
+                <img className="imgReferenceIn" src={imagen} />
+              </div>
+            </div>
+          </div>
+        </div>
   );
 }
 
 function NotifyShowExpandedComponent() {
   return (
     <div className="showExpanded">
-      <div className="notifyAndroidEx"></div>
-      <div className="notifyIosEx"></div>
-    </div>
+          <div className="notifyAndroidEx">
+            <div className="boxAndroidEx">
+              <h4>Hola mundo</h4>
+              <p>esto es un texto</p>
+              <div className="imageRef">
+                <img className="imgReference" src={imagen} />
+              </div>
+            </div>
+          </div>
+          <div className="notifyIosEx">
+            <div className="boxIosEx">
+              <h4>Hola mundo</h4>
+              <p>esto es un texto</p>
+              <div className="imageRef">
+                <img className="imgReference" src={imagen} />
+              </div>
+            </div>
+          </div>
+        </div>
   );
 }
 
@@ -109,11 +142,8 @@ const NewNotification = () => {
   const [isNowDate, setIsNowDate] = useState(false);
   const [isProgrammedDate, setIsProgrammedDate] = useState(false);
   const [isPersonalizeDate, setIsPersonalizeDate] = useState(false);
-  const [isShowInitial, setIsShowInitial] = useState(false);
-  const [isShowExpanded, setIsShowExpanded] = useState(false)
-
-
-e
+  const [isShowInitial, setIsShowInitial] = useState(true);
+  const [isShowExpanded, setIsShowExpanded] = useState(false);
 
   const handleNowButton = () => {
     setIsNowDate(true);
@@ -132,6 +162,16 @@ e
     setIsProgrammedDate(false);
     setIsNowDate(false);
   };
+
+  const handleInitialButton = () =>  {
+    setIsShowInitial(true);
+    setIsShowExpanded(false);
+  }
+
+  const handleExpandedButton = () => {
+    setIsShowExpanded(true);
+    setIsShowInitial(false);
+  }
 
   return (
     <div className="newNotificationBody">
@@ -221,12 +261,10 @@ e
       </div>
       <div className="notifyShow">
         <h1>Vista Previa</h1>
-        <button className="buttonInitial">Estado Inicial</button>
-        <button className="buttonExpanded">Vista Expandida</button>
-        <div className="showExpanded">
-          <div className="notifyAndroidEx"></div>
-          <div className="notifyIosEx"></div>
-        </div>
+        <button className="buttonInitial" onClick={handleInitialButton}>Estado Inicial</button>
+        <button className="buttonExpanded" onClick={handleExpandedButton}>Vista Expandida</button>
+        {isShowInitial && <NotifyShowInitialComponent/>}
+        {isShowExpanded && <NotifyShowExpandedComponent/>}
       </div>
     </div>
   );
