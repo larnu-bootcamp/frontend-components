@@ -12,7 +12,7 @@ export default function SignOutView () {
   /* Function to sign out the user and navigate to the login page */
   async function handleUserLoggedIn (user: any){
     await logout();
-    navigate ('/login');
+    navigate ('/');
     localStorage.removeItem('token');
     window.location.reload();
   }
