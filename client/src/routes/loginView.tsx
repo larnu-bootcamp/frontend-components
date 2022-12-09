@@ -46,7 +46,7 @@ export default function LoginView() {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
-        alert("Usuario creado satisfactoriamente");
+        // alert("Usuario creado satisfactoriamente");
       })
       .catch((error) => {
         const errorMessage = error.message;
