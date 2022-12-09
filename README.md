@@ -42,4 +42,8 @@ Solicitar revisión y comentar en github
 * 4: no hay nadie loggeado 
 * 5: ya existe username 
 * 6: nuevo username / click en continuar
+
+# Integación CI/CD
+  
 # ProyectTypescript
+https://usera-77c6e.firebaseapp.com/
