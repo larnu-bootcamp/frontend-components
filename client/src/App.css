@@ -62,20 +62,34 @@ input,
   background-color: #fff;
 }
 
+/* buttons singInAcount , singUpAcount */
 .singInAcount,
 .singUpAcount {
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
   background-color: #5643c1;
   height: 40px;
   font-size: medium;
   color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 }
 
+.singInAcount:hover,
+.singUpAcount:hover {
+  background-color: #40338d;
+  color: rgba(255, 255, 255, 0.921);
+  transform: scale(1.1);
+  cursor: pointer;
+}
 
-/* Email Form */
+/*this button will increase a little when is hover and also will hace a pointer*/
+.googleSingUpAcount:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 
 .email {
   width: 250px;
@@ -86,6 +100,9 @@ input,
   background-color: #fff;
   height: 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #5643c1;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .password {
@@ -97,6 +114,9 @@ input,
   background-color: #fff;
   height: 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #5643c1;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 
