@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #F0F5FD;
 }
 
 .newNotificationBody {
@@ -37,9 +38,17 @@
   height: 20px;
 }
 
+.ButtonOrientation{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
 .orientation {
   width: 50px;
   height: 30px;
+  border-color: transparent;
+  
 }
 
 .orientationimg {
@@ -71,21 +80,27 @@
   border-color: transparent;
 }
 
+.roundCk{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
 .roundchk {
-  position: relative;
+  display: flex;
+  flex-direction: row;
 }
 
 .roundchk label {
   background-color: #fff;
   border: 1px solid #ccc;
   cursor: pointer;
-  height: 28px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 28px;
+  height: 30px;
+  width: 30px;
   font-size: 16px;
-  padding: 3px 0px 2px 5px;
+  border-radius: 15px;
 }
 
 .roundchk label:after {
@@ -114,6 +129,16 @@
 .roundchk input[type="checkbox"]:checked + label:after {
   opacity: 1;
 }
+
+.buttonInitial, .buttonExpanded{
+  width: 150px;
+  height: 25px;
+  background-color: #E3EEFF;
+  color: #3A59E8;
+  border-color: transparent;
+  border-radius: 15px;
+}
+
 
 .showInitial {
   display: flex;
@@ -222,4 +247,24 @@ display: flex;
     flex-direction: column;
     margin-top: 70px;
     margin-left: 50px;
+}
+
+.post{
+  width: 100px;
+  height: 25px;
+  background-color:  #61D66B;
+  color: white;
+  border-color: transparent;
+  border-radius: 15px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.iconsend{
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
 }
