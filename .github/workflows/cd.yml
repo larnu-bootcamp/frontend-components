@@ -8,6 +8,15 @@ on:
   workflow_dispatch:
 
 jobs:
+  linting:
+    name: Linting of the code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install packages
+        run: npm i
+      - name: Run linting 
+        run: npm run lint  
   build:
     name: Build
     runs-on: ubuntu-latest
