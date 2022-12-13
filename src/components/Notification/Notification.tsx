@@ -17,15 +17,6 @@ const Notification = () => {
           </button>
         </div>
       </div>
-    <div className="Notification__action_bar">
-        <p>Campaña</p>
-        <p>Inicio</p>
-        <p>Estado</p>
-        <p>Orientacion</p>
-        <p>Envios</p>
-        <p>Abiertos</p>
-        <p>% de apertura</p>
-      </div> 
       <div className="Notification__box_body">
         <img className="Notification__image_message" src={message} />
         <p>Crea tu primera notificacion</p>

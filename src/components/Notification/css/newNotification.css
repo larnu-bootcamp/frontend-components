@@ -8,6 +8,8 @@
 .newNotificationBody {
   display: flex;
   flex-direction: row;
+gap: 10px;
+margin-top: 30px;
 }
 
 .newNotify {
@@ -153,31 +155,31 @@
 }
 
 .notifyAndroidIn {
-  width: 450px;
-  height: 200px;
+  width: 400px;
+  height: 180px;
   background-image: url("../../../assets/android-EstadoInicial.png");
-  background-size: 450px 200px;
+  background-size: 400px 180px;
 }
 
 .notifyIosIn {
-  width: 450px;
-  height: 200px;
+  width: 400px;
+  height: 180px;
   background-image: url("../../../assets/ios-EstadoInicial.png");
-  background-size: 450px 200px;
+  background-size: 400px 180px;
 }
 
 .notifyAndroidEx {
-  width: 450px;
-  height: 250px;
+  width: 400px;
+  height: 200px;
   background-image: url("../../../assets/android-VistaExpandida.png");
-  background-size: 450px 250px;
+  background-size: 400px 200px;
 }
 
 .notifyIosEx {
-  width: 450px;
-  height: 250px;
+  width: 400px;
+  height: 200px;
   background-image: url("../../../assets/ios-VistaExpandida.png");
-  background-size: 450px 250px;
+  background-size: 400px 200px;
 }
 
 .boxAndroidEx{
@@ -187,27 +189,26 @@
   gap: 10px;
   margin-top: 60px;
   margin-left: 50px;
-  color: #3a59e8;
-  width: 350px ;
-  height: 180px;
+  width: 300px ;
+  height: 150px;
 }
 
 .imgReference{
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 .imageRef{
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 350px ;
+  width: 300px ;
   height: 180px;
 }
 
 .boxIosEx{
-width: 350px ;
-height: 180px;
+width: 300px ;
+height: 150px;
 display: flex;
   flex-direction: column;
   text-align: left;
@@ -217,7 +218,7 @@ display: flex;
 }
 
 .boxAndroidIn{
-  width: 300px;
+  width: 200px;
   height: 60px;
   display: flex;
   gap: 5px;
@@ -230,7 +231,7 @@ display: flex;
   display: flex;
   flex-direction: row-reverse;
   text-align: end;
-  width: 350px ;
+  width: 250px ;
   height: 50px;
 }
 
@@ -240,7 +241,7 @@ display: flex;
 }
 
 .boxIosIn{
-    width: 300px;
+    width: 200px;
     height: 60px;
     display: flex;
     gap: 5px;
@@ -268,3 +269,5 @@ display: flex;
   height: 15px;
   background-color: transparent;
 }
+
+

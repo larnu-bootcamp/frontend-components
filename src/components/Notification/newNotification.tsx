@@ -6,7 +6,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import info from "../../assets/info.png";
 import imagen from "../../assets/imagen.png";
-import iconSend from "../../assets/iconSend.png"
+import iconSend from "../../assets/iconSend.png";
 
 function NowDateComponent() {
   const [startDate, setStartDate] = useState(new Date());
@@ -46,38 +46,38 @@ function PersonalizeDateComponent() {
   return (
     <React.Fragment>
       <table className="roundCk">
-        <div class="roundchk">
+        <div className="roundchk">
           <input name="Domingo" type="checkbox" id="checkbox-dom" value="Dom" />
-          <label for="checkbox-Dom"> D </label>
+          <label htmlFor="checkbox-Dom"> D </label>
         </div>
-        <div class="roundchk">
+        <div className="roundchk">
           <input name="Lunes" type="checkbox" id="checkbox-lun" value="Lun" />
-          <label for="checkbox-lun"> L </label>
+          <label htmlFor="checkbox-lun"> L </label>
         </div>
-        <div class="roundchk">
+        <div className="roundchk">
           <input name="Martes" type="checkbox" id="checkbox-mar" value="Mar" />
-          <label for="checkbox-mar"> M </label>
+          <label htmlFor="checkbox-mar"> M </label>
         </div>
-        <div class="roundchk">
+        <div className="roundchk">
           <input
             name="Miercoles"
             type="checkbox"
             id="checkbox-mie"
             value="Mie"
           />
-          <label for="checkbox-mie"> M </label>
+          <label htmlFor="checkbox-mie"> M </label>
         </div>
-        <div class="roundchk">
+        <div className="roundchk">
           <input name="Jueves" type="checkbox" id="checkbox-jue" value="Jue" />
-          <label for="checkbox-jue"> J </label>
+          <label htmlFor="checkbox-jue"> J </label>
         </div>
-        <div class="roundchk">
+        <div className="roundchk">
           <input name="Viernes" type="checkbox" id="checkbox-vie" value="Vie" />
-          <label for="checkbox-vie"> V </label>
+          <label htmlFor="checkbox-vie"> V </label>
         </div>
-        <div class="roundchk">
+        <div className="roundchk">
           <input name="Sabado" type="checkbox" id="checkbox-sab" value="Sab" />
-          <label for="checkbox-sab"> S </label>
+          <label htmlFor="checkbox-sab"> S </label>
         </div>
       </table>
       <input className="timePersonalize" type={"time"} />
@@ -272,7 +272,7 @@ const NewNotification = () => {
         {isShowExpanded && <NotifyShowExpandedComponent />}
       </div>
       <button className="post">
-            <img src={iconSend} className="iconsend"/> publicar
+        <img src={iconSend} className="iconsend" /> publicar
       </button>
     </div>
   );
