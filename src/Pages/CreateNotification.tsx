@@ -10,7 +10,7 @@ const CreateNotification = () =>{
   return(
     <div className="createNotificationBody">
       <Navbar/>
-      <NewNotification/>
+      <NewNotification className="newnotifybody"/>
     </div>
   )
 }
