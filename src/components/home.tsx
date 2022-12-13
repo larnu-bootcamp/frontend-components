@@ -10,7 +10,7 @@ import dalletest6 from '../assets/Dalle/dalletest6.png';
 import dalletest7 from '../assets/Dalle/dalletest7.png';
 import ReactGa from 'react-ga';
 
-// typescript
+
 let TRACKING_ID = "" 
 
 let Test = "process.env"
@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === "test")
 else (process.env.NODE_ENV === "development") 
   TRACKING_ID = `${Dev}VITE_REACT_APP_TRACKING_CODE`
 
-  
+   
 
 
 function Home() {
