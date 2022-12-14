@@ -29,13 +29,13 @@ function Home() {
     ReactGa.pageview(window.location.pathname)
   }, []);
 
-  const [counter1, setCounter1] = useState(0);
-  const [counter2, setCounter2] = useState(0);
-  const [counter3, setCounter3] = useState(0);
-  const [counter4, setCounter4] = useState(0);
-  const [counter5, setCounter5] = useState(0);
-  const [counter6, setCounter6] = useState(0);
-  const [counter7, setCounter7] = useState(0);
+  const [counter1, setCounter1] = useState(5);
+  const [counter2, setCounter2] = useState(10);
+  const [counter3, setCounter3] = useState(15);
+  const [counter4, setCounter4] = useState(20);
+  const [counter5, setCounter5] = useState(25);
+  const [counter6, setCounter6] = useState(30);
+  const [counter7, setCounter7] = useState(35);
 
 
   const clickPicture1 = ()=> {
@@ -110,7 +110,7 @@ function Home() {
           <div className='imgvote'>
 
           
-            <img src={dalletest1} alt="dalletest1" className='vote' onClick={() => clickPicture1()} />
+            <img src={dalletest1} alt="dalletest1" className='vote' data-testid='vote1' onClick={() => clickPicture1()} />
             <h3>Imagen 1</h3>
             {counter1}
           </div>
