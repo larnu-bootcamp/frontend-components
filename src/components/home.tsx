@@ -19,11 +19,8 @@ let Dev = "import.meta.env"
 //
 if (process.env.NODE_ENV === "test") 
   TRACKING_ID = `${Test}VITE_REACT_APP_TRACKING_CODE`
-else (process.env.NODE_ENV === "development") 
+else (process.env.NODE_ENV === "development" || process.env.NODE_ENV === "production") 
   TRACKING_ID = `${Dev}VITE_REACT_APP_TRACKING_CODE`
-
-   
-
 
 function Home() {
   ReactGa.initialize(TRACKING_ID)
