@@ -18,7 +18,7 @@ export function Push() {
 
   useEffect (()=>{
     onMessage(messaging, message =>{
-      toast(message.notification.title)
+      toast(message.notification?.title)
     })
   }, []);
   return (
