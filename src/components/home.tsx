@@ -11,8 +11,9 @@ import dalletest7 from '../assets/Dalle/dalletest7.png';
 import ReactGa from 'react-ga';
 
 
+
 const TRACKING_ID=import.meta.env.VITE_REACT_APP_TRACKING_CODE;
-ReactGa.initialize(TRACKING_ID)
+ReactGa.initialize(TRACKING_ID);
 
 
 function Home() {
@@ -21,7 +22,7 @@ function Home() {
     ReactGa.pageview(window.location.pathname)
   }, []);
 
-  const [counter1, setCounter1] = useState(0);
+  const [counter1, setCounter1] = useState(5);
   const [counter2, setCounter2] = useState(0);
   const [counter3, setCounter3] = useState(0);
   const [counter4, setCounter4] = useState(0);

@@ -1,8 +1,13 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from '../App';
+import App from "../App"
+import { render, screen } from '@testing-library/react'
+import React from "react";
 
-test('Renders main page correctly', () => {
-  render(<App />);
-  expect(true).toBeTruthy();
-});
+
+describe('test generales a la app', () => {
+  test('like 1 al renderizar por primera vez ', () => {
+    render(<App />);
+    const counter1 = screen.getByText ("5");
+    expect (counter1).toBe('5'); 
+  });
+    
+  })

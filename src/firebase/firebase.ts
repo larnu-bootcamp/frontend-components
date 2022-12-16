@@ -4,6 +4,7 @@ import { getAuth } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
 import { getFirestore, collection, getDocs, doc, getDoc, query, where, setDoc, DocumentData } from 'firebase/firestore';
 import { getAnalytics } from "firebase/analytics";
+import { getMessaging } from "firebase/messaging"
 
 
 /* Firebase Keys */
@@ -25,6 +26,7 @@ export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
 export const analytics = getAnalytics(app);
+export const messaging = getMessaging(app);
 
 /* This function check if the user exists in db by uid */
 export async function userExist(uid: string) {
