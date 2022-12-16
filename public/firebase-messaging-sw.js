@@ -26,7 +26,7 @@ messaging.onBackgroundMessage (payload =>{
   const notificationTitle = payload.notification.title;
   const notificationsOptions = {
     body: payload.notification.body,
-    icon: "/larnu.png"
+    icon: "./larnu.png"
   }
   return self.resgistration.showNotification(
     notificationTitle,
