@@ -12,7 +12,10 @@ export function Push() {
       vapidKey: "BHvYUDbp0WKzFQPwcHIBLUWvIHcPHSSIxDW7s-mLNLh2x69sIdADIi3ttEp1f0rxniTBLpp__DjENbLYBWONatE"
     }).catch(error => console.log("Tuviste un error al generar el Token"));
 
-    if (token) alert (token);
+    if (token) {
+      alert (token);
+      console.log(token)
+    } ;
     if(!token) console.log ("no tienes Toekn");
   }
 
