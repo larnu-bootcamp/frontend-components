@@ -1,25 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/Notification.css";
 import plus from "../../assets/plus.png";
 import message from "../../assets/message.png";
+import { Link } from "react-router-dom";
+
+
+
+
+
+
+
 
 const Notification = () => {
+  
+  
   return (
-    <div className="Notification__page_body">
+    <div className="notificationComponent">
       <div>
-        <div className="Notification__add_button_bar">
-          <div className="Notification__box_text">
-            <h2 className="Notification__text_bar">Notificaciones Push</h2>
+        <div className="notificationAddButtonBar">
+          <div className="notificationBoxText">
+            <h2 className="notificationTextBar">Notificaciones Push</h2>
           </div>
-          <button className="button__new_notification">
-            <img src={plus} className="Notification__image_plus" /> Nueva
-            Notificacion
+          <Link to='/Create-Notification'>
+          <button className="buttonNewNotification" >
+            <img src={plus} className="notificationImagePlus" /> 
+            Nueva Notificacion 
           </button>
+          </Link>
         </div>
       </div>
-      <div className="Notification__box_body">
-        <img className="Notification__image_message" src={message} />
-        <p>Crea tu primera notificacion</p>
+      <div className="notificationBoxBody">
+        <img className="notificationImageMessage" src={message} />
+        <p className="titleBoxBody">Crea tu primera notificacion</p>
       </div>
     </div>
   );

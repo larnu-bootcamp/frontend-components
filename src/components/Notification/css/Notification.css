@@ -1,85 +1,58 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.notificationImagePlus{
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
 }
 
-.Notification__page_body{
+.notificationImageMessage{
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+}
+
+.notificationComponent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  margin-top: 50px;
   background-color: #F0F5FD;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
 }
 
-.Notification__text_bar{
-  display:flex;
-  flex-direction:row;
-  width: 300px;
-  
+.notificationTextBar{
+  background-color: #F0F5FD;
+  color: #3E416D;
 }
 
-.Notification__box_text{
-  width: 15%;
-  border-bottom: 5px solid #61D66B;
-}
-
-.Notification__image_plus{
-  width: 12px;
-  height: 12px;
-}
-
-.button__new_notification{
-  width: 300px;
-  height: 35px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  border-radius: 15px;
+.notificationBoxText{
   background-color: #61D66B;
-  color: #ffffff;
-  border-color: transparent;
 }
 
-.Notification__add_button_bar{
+.notificationAddButtonBar{
   display: flex;
   flex-direction: row;
-  justify-content:center;
-  align-items: center;
-  gap: 400px;
+  gap: 450px;
+  background-color: #F0F5FD;
 }
 
-.Notification__action_bar{
-  width: 90%;
-  height: 40px;
+.notificationBoxBody{
   display: flex;
-  flex-direction:row;
-  align-items:center;
-  justify-content: space-evenly;
-  border-radius: 10px;
-  background-color: #FFFFFF;
-}
-
-.Notification__box_body{
-  display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  opacity: .9;
-  font-size: large;
+  gap: 10px;
+  opacity: .7;
+  background-color: #F0F5FD;
+
 }
 
-
-.Notification__image_message{
-  width: 100px;
-  height:100px;
+.titleBoxBody{
+  color: #3E416D;
+  background-color: transparent;
 }
 
-.Notification__box_information{
-  width: 90%;
-  height: 250px;
-  border-radius: 10px;
-  background-color: aquamarine;
+.buttonNewNotification{
+  width: 200px;
+  height: 40px;
+  background-color:#61D66B ;
+  border-color: transparent;
 }

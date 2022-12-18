@@ -7,6 +7,7 @@ import SignOutView from './routes/signOutView';
 import ChooseUsernameView from './routes/chooseUsernameView';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PushView from './routes/pushView';
+import NewNotification from './components/Notification/newNotification';
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <Route path='Signout' element={<SignOutView/>} />
       <Route path='choose-username' element={<ChooseUsernameView/>} />
       <Route path='push-view' element={<PushView/>} />
+      <Route path='Create-Notification' element={<NewNotification/>} />
     </Routes>
   </BrowserRouter>
 );
