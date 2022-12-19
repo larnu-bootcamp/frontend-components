@@ -82,7 +82,7 @@ export default function Dashboard() {
         <DashboardWrapper children={null} />
       </div>
       <div className="PushView">
-       { <Push /> }
+      { <Push /> }
       </div>
     </div>
   );
