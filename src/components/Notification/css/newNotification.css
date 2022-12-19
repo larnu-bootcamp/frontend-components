@@ -2,14 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #F0F5FD;
+  background-color: #f0f5fd;
 }
 
 .newNotificationBody {
   display: flex;
   flex-direction: row;
-gap: 10px;
-margin-top: 30px;
+  gap: 10px;
+  margin-top: 30px;
 }
 
 .newNotify {
@@ -40,9 +40,10 @@ margin-top: 30px;
   height: 20px;
 }
 
-.ButtonOrientation{
+.ButtonOrientation {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 5px;
 }
 
@@ -50,12 +51,13 @@ margin-top: 30px;
   width: 50px;
   height: 30px;
   border-color: transparent;
-  
 }
 
 .orientationimg {
   width: 20px;
   height: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
 .textTile {
@@ -82,7 +84,7 @@ margin-top: 30px;
   border-color: transparent;
 }
 
-.roundCk{
+.roundCk {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -132,15 +134,15 @@ margin-top: 30px;
   opacity: 1;
 }
 
-.buttonInitial, .buttonExpanded{
+.buttonInitial,
+.buttonExpanded {
   width: 150px;
   height: 25px;
-  background-color: #E3EEFF;
-  color: #3A59E8;
+  background-color: #e3eeff;
+  color: #3a59e8;
   border-color: transparent;
   border-radius: 15px;
 }
-
 
 .showInitial {
   display: flex;
@@ -182,34 +184,34 @@ margin-top: 30px;
   background-size: 400px 200px;
 }
 
-.boxAndroidEx{
+.boxAndroidEx {
   display: flex;
   flex-direction: column;
   text-align: left;
   gap: 10px;
   margin-top: 60px;
   margin-left: 50px;
-  width: 300px ;
+  width: 300px;
   height: 150px;
 }
 
-.imgReference{
+.imgReference {
   width: 80px;
   height: 80px;
 }
 
-.imageRef{
+.imageRef {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 300px ;
+  width: 300px;
   height: 180px;
 }
 
-.boxIosEx{
-width: 300px ;
-height: 150px;
-display: flex;
+.boxIosEx {
+  width: 300px;
+  height: 150px;
+  display: flex;
   flex-direction: column;
   text-align: left;
   gap: 10px;
@@ -217,7 +219,7 @@ display: flex;
   margin-left: 50px;
 }
 
-.boxAndroidIn{
+.boxAndroidIn {
   width: 200px;
   height: 60px;
   display: flex;
@@ -227,33 +229,33 @@ display: flex;
   margin-left: 50px;
 }
 
-.imageRefIn{
+.imageRefIn {
   display: flex;
   flex-direction: row-reverse;
   text-align: end;
-  width: 250px ;
+  width: 250px;
   height: 50px;
 }
 
-.imgReferenceIn{
-  width: 50px ;
+.imgReferenceIn {
+  width: 50px;
   height: 50px;
 }
 
-.boxIosIn{
-    width: 200px;
-    height: 60px;
-    display: flex;
-    gap: 5px;
-    flex-direction: column;
-    margin-top: 70px;
-    margin-left: 50px;
+.boxIosIn {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  margin-top: 70px;
+  margin-left: 50px;
 }
 
-.post{
+.post {
   width: 100px;
   height: 25px;
-  background-color:  #61D66B;
+  background-color: #61d66b;
   color: white;
   border-color: transparent;
   border-radius: 15px;
@@ -264,10 +266,8 @@ display: flex;
   gap: 5px;
 }
 
-.iconsend{
+.iconsend {
   width: 15px;
   height: 15px;
   background-color: transparent;
 }
-
-

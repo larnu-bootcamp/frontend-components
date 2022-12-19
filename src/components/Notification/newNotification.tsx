@@ -7,6 +7,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import info from "../../assets/info.png";
 import imagen from "../../assets/imagen.png";
 import iconSend from "../../assets/iconSend.png";
+import Dashboard from "../../routes/dashboardView";
+import { Link } from "react-router-dom";
 
 function NowDateComponent() {
   const [startDate, setStartDate] = useState(new Date());
@@ -176,6 +178,7 @@ const NewNotification = () => {
 
   return (
     <div className="newNotificationBody">
+      
       <div className="newNotify">
         <h1>Detalle nueva notificacion push</h1>
         <form
@@ -212,7 +215,7 @@ const NewNotification = () => {
             className="butonPiker"
             style={{
               background: "#D1FFD5",
-              padding: "4px 20px",
+              
               width: "100px",
               height: "25px",
               color: "#1D745A",
@@ -271,9 +274,11 @@ const NewNotification = () => {
         {isShowInitial && <NotifyShowInitialComponent />}
         {isShowExpanded && <NotifyShowExpandedComponent />}
       </div>
+      <Link to='/Show-Notification'>
       <button className="post">
         <img src={iconSend} className="iconsend" /> publicar
       </button>
+      </Link>
     </div>
   );
 };

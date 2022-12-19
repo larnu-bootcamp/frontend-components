@@ -1,32 +1,31 @@
 import React from "react";
-import "./css/ShowNotification.css"
-import edit from '../../assets/edit.png'
+import "./css/ShowNotification.css";
+import edit from "../../assets/edit.png";
 
-
-function TableCardComponent (){
-return(
-
-        <tr>
-          <td>campaña</td>
-          <td>inicio</td>
-          <td>estado</td>
-          <td>orientacion</td>
-          <td>envios</td>
-          <td>abiertos</td>
-          <td>% de abertura</td>
-          <td><button><img src={edit}/></button></td>
-        </tr>
-        
-)
+function TableCardComponent() {
+  return (
+    <tr>
+      <td>campaña</td>
+      <td>inicio</td>
+      <td>estado</td>
+      <td>orientacion</td>
+      <td>envios</td>
+      <td>abiertos</td>
+      <td>% de abertura</td>
+      <td>
+        <button className="buttonEdit">
+          <img className="edit" src={edit} />
+        </button>
+      </td>
+    </tr>
+  );
 }
-
-
 
 const ShowNotification = () => {
   return (
-    <React.Fragment>
-      <table>
-      <tr>
+    <div className="tableShowNotify">
+      <table className="tableStatic">
+        <tr>
           <th>campaña</th>
           <th>inicio</th>
           <th>estado</th>
@@ -36,11 +35,9 @@ const ShowNotification = () => {
           <th>% de abertura</th>
           <th></th>
         </tr>
-        <TableCardComponent/>
+        <TableCardComponent />
       </table>
-
-      </React.Fragment>
-    
+    </div>
   );
 };
 

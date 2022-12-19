@@ -28,10 +28,8 @@ export function Push() {
   return (
     <div className="pushContainer">
       <div className="pushTitle">
-        <h1>Push</h1>
         <ToastContainer />
-        <button onClick={messageActivation}>Generar Token</button>
-      </div>
+        </div>
       <Notification />
     </div>
   );
