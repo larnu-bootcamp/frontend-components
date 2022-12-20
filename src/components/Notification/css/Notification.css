@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .notificationImagePlus{
   width: 10px;
   height: 10px;
@@ -55,4 +61,8 @@
   height: 40px;
   background-color:#61D66B ;
   border-color: transparent;
+}
+
+.hola {
+  background-color: #F0F5FD;
 }

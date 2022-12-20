@@ -22,10 +22,13 @@ const Notification = () => {
             <h2 className="notificationTextBar">Notificaciones Push</h2>
           </div>
           <Link to='/Create-Notification'>
+          <div className="hola">
           <button className="buttonNewNotification" >
             <img src={plus} className="notificationImagePlus" /> 
             Nueva Notificacion 
           </button>
+          </div>
+
           </Link>
         </div>
       </div>
