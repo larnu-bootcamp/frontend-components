@@ -21,8 +21,9 @@
   flex-direction: column;
   align-items: center;
   gap: 100px;
-  margin-top: 50px;
   background-color: #F0F5FD;
+  height: 100vh;
+  
 }
 
 .notificationTextBar{

@@ -1,6 +1,8 @@
 import React from "react";
 import "./css/ShowNotification.css";
 import edit from "../../assets/edit.png";
+import { Link } from "react-router-dom";
+import plus from "../../assets/plus.png"
 
 function TableCardComponent() {
   return (
@@ -18,12 +20,29 @@ function TableCardComponent() {
         </button>
       </td>
     </tr>
+
+    
   );
 }
 
 const ShowNotification = () => {
   return (
     <div className="tableShowNotify">
+      <div>
+        <div className="notificationAddButtonBar">
+          <div className="notificationBoxText">
+            <h2 className="notificationTextBar">Notificaciones Push</h2>
+          </div>
+          <Link to='/Create-Notification'>
+          <div className="hola">
+          <button className="buttonNewNotification" >
+            <img src={plus} className="notificationImagePlus" /> 
+            Nueva Notificacion 
+          </button>
+          </div>
+
+          </Link>
+        </div>
       <table className="tableStatic">
         <tr>
           <th>campaña</th>
@@ -37,6 +56,7 @@ const ShowNotification = () => {
         </tr>
         <TableCardComponent />
       </table>
+    </div>
     </div>
   );
 };

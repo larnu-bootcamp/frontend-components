@@ -9,6 +9,7 @@
   flex-direction: row;
   gap: 10px;
   margin-top: 30px;
+  background-color: #f0f5fd;
 }
 
 .newNotify {
@@ -39,17 +40,19 @@
   height: 20px;
 }
 
-.ButtonOrientation {
+.buttonOrientation {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 5px;
+  
 }
 
 .orientation {
   width: 50px;
   height: 30px;
   border-color: transparent;
+  background-color: transparent;
 }
 
 .orientationimg {
@@ -88,7 +91,6 @@
   flex-direction: row;
   align-items: center;
   text-align: center;
-  gap: 5px;
 }
 
 .roundchk {
@@ -133,6 +135,15 @@
   opacity: 1;
 }
 
+.buttonsExpInit{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+
 .buttonInitial,
 .buttonExpanded {
   width: 150px;
@@ -152,7 +163,7 @@
 .showExpanded {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 45px;
 }
 
 .notifyAndroidIn {
@@ -269,4 +280,22 @@
   width: 15px;
   height: 15px;
   background-color: transparent;
+}
+
+.showSistem{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.showSisImg{
+  width: 20px;
+  height: 20px;
+}
+
+
+.diasSemana{
+  width: 300px;
 }

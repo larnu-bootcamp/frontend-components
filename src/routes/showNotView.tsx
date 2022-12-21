@@ -43,9 +43,9 @@ export default function ShowNot() {
   }
 
   return (
-    <div className="dashboardContainer">
+    <div className="newNotifypage" >
       <SideBar />
-      <div className="dashboardView">
+      <div className="notifyNew">
         <ShowNotification />
       </div>
     </div>

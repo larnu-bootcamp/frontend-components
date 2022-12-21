@@ -46,7 +46,7 @@ function ProgrammedDateComponent() {
 
 function PersonalizeDateComponent() {
   return (
-    <React.Fragment>
+    <div className="diasSemana">
       <table className="roundCk">
         <div className="roundchk">
           <input name="Domingo" type="checkbox" id="checkbox-dom" value="Dom" />
@@ -87,7 +87,7 @@ function PersonalizeDateComponent() {
         <p>Inicio</p>
         <p>Fin</p>
       </div>
-    </React.Fragment>
+    </div>
   );
 }
 
@@ -103,6 +103,9 @@ function NotifyShowInitialComponent() {
           </div>
         </div>
       </div>
+      <div className="showSistem">
+        <img className="showSisImg" src={android}/> <p>Android</p>
+      </div>
       <div className="notifyIosIn">
         <div className="boxIosIn">
           <h4>Hola mundo</h4>
@@ -111,7 +114,11 @@ function NotifyShowInitialComponent() {
             <img className="imgReferenceIn" src={imagen} />
           </div>
         </div>
+        
       </div>
+      <div className="showSistem">
+        <img className="showSisImg" src={ios}/> <p>Ios</p>
+        </div>
     </div>
   );
 }
@@ -127,6 +134,9 @@ function NotifyShowExpandedComponent() {
             <img className="imgReference" src={imagen} />
           </div>
         </div>
+        <div className="showSistem">
+        <img className="showSisImg" src={android}/> <p>Android</p>
+      </div>
       </div>
       <div className="notifyIosEx">
         <div className="boxIosEx">
@@ -137,6 +147,9 @@ function NotifyShowExpandedComponent() {
           </div>
         </div>
       </div>
+      <div className="showSistem">
+        <img className="showSisImg" src={ios}/> <p>Ios</p>
+        </div>
     </div>
   );
 }
@@ -234,12 +247,14 @@ const NewNotification = () => {
             <img className="imginfo" src={info} />
           </label>
           <div className="buttonOrientation">
+            
             <button className="orientation">
               <img className="orientationimg" src={android} />
             </button>
             <button className="orientation">
               <img className="orientationimg" src={ios} />
             </button>
+            
           </div>
 
           <label className="programacion" name="programacion">
@@ -265,12 +280,14 @@ const NewNotification = () => {
       </div>
       <div className="notifyShow">
         <h1>Vista Previa</h1>
+        <div className="buttonsExpInit">
         <button className="buttonInitial" onClick={handleInitialButton}>
           Estado Inicial
         </button>
         <button className="buttonExpanded" onClick={handleExpandedButton}>
           Vista Expandida
         </button>
+        </div>
         {isShowInitial && <NotifyShowInitialComponent />}
         {isShowExpanded && <NotifyShowExpandedComponent />}
       </div>

@@ -46,9 +46,11 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="dashboardContainer">
+    <div className="newNotifypage">
       <SideBar />
-      <div className="PushView">{<Push />}</div>
+      <div className="notifyNew">
+        {<Push />}
+        </div>
     </div>
   );
 }

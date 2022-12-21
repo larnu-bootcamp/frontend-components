@@ -45,9 +45,9 @@ export default function NewNot() {
   }
 
   return (
-    <div className="dashboardContainer">
+    <div className="newNotifypage" >
       <SideBar />
-      <div className="dashboardView">
+      <div className="notifyNew" >
         <NewNotification />
       </div>
     </div>
