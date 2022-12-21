@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "notification-push",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,12 +10,18 @@
     "test": "vitest",
     "lint": "eslint . --ext .tsx",
     "build:deploy": "env-cmd -f .env.local npm run build && firebase deploy -P usera-77c6e"
+    
   },
+  
   "dependencies": {
-    "firebase": "^9.14.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.16",
     "jsdom": "^20.0.3",
     "react": "^18.2.0",
+    "react-datepicker": "^4.8.0",
     "react-dom": "^18.2.0",
+    "firebase": "^9.14.0",
     "react-ga": "^3.3.1",
     "react-iframe": "^1.8.5",
     "react-router-dom": "^6.4.3",

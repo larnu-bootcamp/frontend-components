@@ -6,7 +6,6 @@ import AuthProvider1 from '../components/authProvider';
 import logo from "../assets/logo.svg";
 import Google from "../assets/Google.png";
 import ReactGa from 'react-ga';
-import React from "react";
 
 /* Component to display the login page */
 export default function LoginView() {
