@@ -389,4 +389,15 @@ min-width: 100%;
 .notifyNew{
   width: 90%;
   height: 100vh;
+  overflow: scroll;
+  
+}
+
+.page1{
+  background-color: #40338d;
+}
+
+.componentNoti{
+  
+  height: 90%;
 }

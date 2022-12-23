@@ -6,6 +6,7 @@ import plus from "../../assets/plus.png"
 
 function TableCardComponent() {
   return (
+    <table>
     <tr>
       <td>campaña</td>
       <td>inicio</td>
@@ -20,7 +21,7 @@ function TableCardComponent() {
         </button>
       </td>
     </tr>
-
+    </table>
     
   );
 }
@@ -43,6 +44,7 @@ const ShowNotification = () => {
 
           </Link>
         </div>
+        <div className="tablesNotification">
       <table className="tableStatic">
         <tr>
           <th>campaña</th>
@@ -54,8 +56,10 @@ const ShowNotification = () => {
           <th>% de abertura</th>
           <th></th>
         </tr>
-        <TableCardComponent />
+        
       </table>
+      <TableCardComponent />
+      </div>
     </div>
     </div>
   );

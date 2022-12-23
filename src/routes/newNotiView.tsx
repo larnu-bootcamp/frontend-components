@@ -48,7 +48,7 @@ export default function NewNot() {
     <div className="newNotifypage" >
       <SideBar />
       <div className="notifyNew" >
-        <NewNotification />
+        < NewNotification />
       </div>
     </div>
   );

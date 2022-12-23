@@ -113,7 +113,7 @@ function Home() {
 }*/
 
   return (
-    <div className="App">
+    <div className="App page1">
       <header className="App-header">
         <p>Prueba Botones</p>
       </header>
