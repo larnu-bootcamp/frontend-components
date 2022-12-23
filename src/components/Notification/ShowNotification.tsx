@@ -30,7 +30,7 @@ const ShowNotification = () => {
   return (
     <div className="tableShowNotify">
       <div>
-        <div className="notificationAddButtonBar">
+        <div className="notificationAddButtonShow">
           <div className="notificationBoxText">
             <h2 className="notificationTextBar">Notificaciones Push</h2>
           </div>
@@ -41,7 +41,6 @@ const ShowNotification = () => {
             Nueva Notificacion 
           </button>
           </div>
-
           </Link>
         </div>
         <div className="tablesNotification">

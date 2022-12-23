@@ -45,6 +45,7 @@ input,
   flex-direction: column;
   height: 100vh;
   gap: 1rem;
+  background-color: #40338d;
 }
 
 .buttons {
